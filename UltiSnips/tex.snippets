@@ -1,0 +1,295 @@
+global !p
+def math():
+  return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+snippet env "New LaTeX environment" b
+\begin{$1}
+	$2
+\end{$1}
+$0
+endsnippet
+
+snippet def "New Definition environment" b
+\begin{definition}
+	$1
+\end{definition}
+$0
+endsnippet
+
+snippet thrm "New Theorem environment for named theorems" b
+\begin{theorem}[$1]
+	$2
+\end{theorem}
+$0
+endsnippet
+
+snippet figi "New Latex Fig from image" b
+\begin{figure}[h]
+	\caption{$1}
+	\centering
+	\includegraphics[scale = $2]{$3}
+\end{figure}
+$0
+endsnippet
+
+snippet m "starts inline math mode"
+\$ $1 \$$0
+endsnippet
+
+snippet dm "starts display math"
+\[
+	$1
+\]
+$0
+endsnippet
+
+snippet O "big-O"
+\$O( $1 )\$$0
+endsnippet
+
+snippet pr "make a procedure with inputs"
+\textsc{$1}\$( $2 )\$$0
+endsnippet
+
+snippet p "procedure name"
+\textsc{$1}$0
+endsnippet
+
+#snippet co "constant"
+#\const{$1}$0
+#endsnippet
+
+context "math()"
+snippet ni "constant nil" A
+\textsc{Nil}$0
+endsnippet
+
+snippet code "makes a new codebox"
+\begin{algorithmic}[1]
+	\State \textsc{ $1}\$( $2 )\$:
+	\Indent
+	\State $0
+	\EndIndent
+\end{algorithmic}
+endsnippet
+
+snippet it "italics"
+\textit{$1}$0
+endsnippet
+
+snippet bf "boldface"
+\textbf{$1}$0
+endsnippet
+
+#snippet ( "auto matching parens" iA
+#($1)$0
+#endsnippet
+
+#snippet [ "auto expanding square brackets" iA
+#[$1]$0
+#endsnippet
+
+#snippet "(\\?)\{" "auto expanding curly braces" riA
+#`!p snip.rv = match.group(1)`{$1`!p snip.rv = match.group(1)`}$0
+#endsnippet
+
+context "math()"
+snippet ff "The LaTeX \frac{}{} command" A
+\frac{ $1 }{ $2 } $0
+endsnippet
+
+context "math()"
+snippet din "A definite Integral" A
+\int_{ $1 }^{ $2 } $3 \; d$4 $0
+endsnippet
+
+context "math()"
+snippet in "An indefite Integral" A
+\int $1 \; d$2 $0
+endsnippet
+
+context "math()"
+snippet lm "Limit" A
+\lim_{ $1 \to $2} \left( $3 \right) $0
+endsnippet
+
+context "math()"
+snippet sm "sum" A
+\sum_{ $1 = $2 }^{ $3 } $0
+endsnippet
+
+context "math()"
+snippet st "set definition" A
+\left\\{ $1 \,:\, $2 \right\\} $0
+endsnippet
+
+context "math()"
+snippet rm "create the textrm command" A
+\textrm{ $1 } $0
+endsnippet
+
+context "math()"
+snippet cal "create mathcal" A
+\mathcal{$1} $0
+endsnippet
+
+context "math()"
+snippet if "the infinity command" A
+\infty $0
+endsnippet
+
+context "math()"
+snippet it "intersection" A
+\cap $0
+endsnippet
+
+context "math()"
+snippet un "union" A
+\cup $0
+endsnippet
+
+context "math()"
+snippet im "implication" A
+\implies $0
+endsnippet
+
+context "math()"
+snippet dt "cdot" A
+\cdot $0
+endsnippet
+
+context "math()"
+snippet td "tripple dots" A
+..., $0
+endsnippet
+
+context "math()"
+snippet lg "log" A
+\log $0
+endsnippet
+
+context "math()"
+snippet su "subset" A
+\subseteq $0
+endsnippet
+
+context "math()"
+snippet mt "the empty set" A
+\varnothing $0
+endsnippet
+
+context "math()"
+snippet pi "pi" A
+\pi $0
+endsnippet
+
+context "math()"
+snippet dl "delta" A
+\delta $0
+endsnippet
+
+context "math()"
+snippet ep "epsilon" A
+\varepsilon $0
+endsnippet
+
+context "math()"
+snippet sg "sigma" A
+\sigma $0
+endsnippet
+
+context "math()"
+snippet al "alpha" A
+\alpha $0
+endsnippet
+
+context "math()"
+snippet be "beta" A
+\beta $0
+endsnippet
+
+context "math()"
+snippet ga "gamma" A
+\gamma$0
+endsnippet
+
+context "math()"
+snippet sr "square root" A
+\sqrt{ $1 } $0
+endsnippet
+
+context "math()"
+snippet fl "floor" A
+\left\lfloor $1 \right\rfloor $0
+endsnippet
+
+context "math()"
+snippet cl "ceiling" A
+\left\lceil $1 \right\rceil $0
+endsnippet
+
+context "math()"
+snippet fa "forall" A
+\forall $0
+endsnippet
+
+context "math()"
+snippet ex "exists" A
+\exists $0
+endsnippet
+
+context "math()"
+snippet pa "partial" A
+\partial $0
+endsnippet
+
+context "math()"
+snippet en "enspace" A
+\enspace $0
+endsnippet
+
+context "math()"
+snippet th "theta" A
+\theta $0
+endsnippet
+
+context "math()"
+snippet Th "Theta" A
+\Theta $0
+endsnippet
+
+context "math()"
+snippet Om "Omega" A
+\Omega $0
+endsnippet
+
+context "math()"
+snippet om "omega" A
+\omega $0
+endsnippet
+
+context "math()"
+snippet la "lambda" A
+\lambda $0
+endsnippet
+
+context "math()"
+snippet ge "greater than or equal to" A
+\geq $0
+endsnippet
+
+context "math()"
+snippet le "less than or equal to" A
+\leq $0
+endsnippet
+
+context "math()"
+snippet ne "not equal" A
+\neq $0
+endsnippet
+
+context "math()"
+snippet "[^0-9 ]\." "adding mathit to variables" riA
+`!p snip.rv = match.group(0)`\mathit{$1}$0
+endsnippet
