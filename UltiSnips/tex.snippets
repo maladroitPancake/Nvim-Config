@@ -84,25 +84,29 @@ snippet figi "New Latex Fig from image" b
 $0
 endsnippet
 
+context "not math()"
 snippet m "starts inline math mode"
 \$ $1 \$$0
 endsnippet
 
-snippet dm "starts display math"
+snippet dm "starts display math" b
 \[
 	$1
 \]
 $0
 endsnippet
 
+context "not math()"
 snippet O "big-O"
 \$O( $1 )\$$0
 endsnippet
 
+context "not math()"
 snippet pr "make a procedure with inputs"
 \textsc{$1}\$( $2 )\$$0
 endsnippet
 
+context "not math()"
 snippet p "procedure name"
 \textsc{$1}$0
 endsnippet
@@ -116,7 +120,7 @@ snippet ni "constant nil" A
 \textsc{Nil}$0
 endsnippet
 
-snippet code "makes a new codebox"
+snippet code "makes a new codebox" b
 \begin{algorithmic}[1]
 	\State \textsc{ $1}\$( $2 )\$:
 	\Indent
@@ -125,10 +129,12 @@ snippet code "makes a new codebox"
 \end{algorithmic}
 endsnippet
 
+context "not math()"
 snippet it "italics"
 \textit{$1}$0
 endsnippet
 
+context "not math()"
 snippet bf "boldface"
 \textbf{$1}$0
 endsnippet
