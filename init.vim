@@ -25,7 +25,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 
 let g:vimtex_quickfix_open_on_warning = 0
-let g:vimtex_quickfix_autoclose_after_keystrokes = 10
+let g:vimtex_quickfix_autoclose_after_keystrokes = 30
 
 let g:pear_tree_pairs = {
 			\ '(': {'closer': ')'},

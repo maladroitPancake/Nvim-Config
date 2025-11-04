@@ -24,6 +24,57 @@ snippet thrm "New Theorem environment for named theorems" b
 $0
 endsnippet
 
+snippet distc "new distribution of a continous random variable" b
+\begin{definition}[$1]
+	~\\\\
+	\textit{Random variable definition}:
+	\[
+		X \sim \textrm{$2}($3)
+	\]
+	\textit{Parameters}:
+	\begin{align*}
+		&$4 :& \textrm{ $5 }$6 
+	\end{align*}
+	\textit{PDF}:
+	\[
+		f(x)=
+		\begin{cases}
+			$7, & $8
+		\end{cases}
+	\]
+	\textit{Mean and Variance}:
+	\begin{gather*}
+		E(X)= $9\\\\
+		V(X)= $10
+	\end{gather*}
+\end{definition}
+$0
+endsnippet
+
+snippet distd "new distribution of a descrete random variable" b
+\begin{definition}[$1]
+	~\\\\
+	\textit{Random variable definition}:
+	\[
+		X \sim \textrm{$2}($3)
+	\]
+	\textit{Parameters}:
+	\begin{align*}
+		&$4 :& \textrm{ $5&}$6 
+	\end{align*}
+	\textit{PMF}:
+	\[
+		f(x)= $7
+	\]
+	\textit{Mean and Variance}:
+	\begin{gather*}
+		E(X)= $8\\\\
+		V(X)= $9
+	\end{gather*}
+\end{definition}
+$0
+endsnippet
+
 snippet figi "New Latex Fig from image" b
 \begin{figure}[h]
 	\caption{$1}
