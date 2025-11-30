@@ -51,4 +51,4 @@ nnoremap <leader>w <cmd>write<CR>
 nnoremap <leader>v <c-v>
 "Might want to enable for future? I maybe want this to be tab but it probably
 "messes with snippets.
-"imap <?> <Plug>(PearTreeJump)
+"imap <Tab> <Plug>(PearTreeJump)
