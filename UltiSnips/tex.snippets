@@ -24,56 +24,56 @@ snippet thrm "New Theorem environment for named theorems" b
 $0
 endsnippet
 
-snippet distc "new distribution of a continous random variable" b
-\begin{definition}[$1]
-	~\\\\
-	\textit{Random variable definition}:
-	\[
-		X \sim \textrm{$2}($3)
-	\]
-	\textit{Parameters}:
-	\begin{align*}
-		&$4 :& \textrm{ $5 }$6 
-	\end{align*}
-	\textit{PDF}:
-	\[
-		f(x)=
-		\begin{cases}
-			$7, & $8
-		\end{cases}
-	\]
-	\textit{Mean and Variance}:
-	\begin{gather*}
-		E(X)= $9\\\\
-		V(X)= $10
-	\end{gather*}
-\end{definition}
-$0
-endsnippet
-
-snippet distd "new distribution of a descrete random variable" b
-\begin{definition}[$1]
-	~\\\\
-	\textit{Random variable definition}:
-	\[
-		X \sim \textrm{$2}($3)
-	\]
-	\textit{Parameters}:
-	\begin{align*}
-		&$4 :& \textrm{ $5 }$6 
-	\end{align*}
-	\textit{PMF}:
-	\[
-		P(X=x)= $7
-	\]
-	\textit{Mean and Variance}:
-	\begin{gather*}
-		E(X)= $8\\\\
-		V(X)= $9
-	\end{gather*}
-\end{definition}
-$0
-endsnippet
+#snippet distc "new distribution of a continous random variable" b
+#\begin{definition}[$1]
+#	~\\\\
+#	\textit{Random variable definition}:
+#	\[
+#		X \sim \textrm{$2}($3)
+#	\]
+#	\textit{Parameters}:
+#	\begin{align*}
+#		&$4 :& \textrm{ $5 }$6
+#	\end{align*}
+#	\textit{PDF}:
+#	\[
+#		f(x)=
+#		\begin{cases}
+#			$7, & $8
+#		\end{cases}
+#	\]
+#	\textit{Mean and Variance}:
+#	\begin{gather*}
+#		E(X)= $9\\\\
+#		V(X)= $10
+#	\end{gather*}
+#\end{definition}
+#$0
+#endsnippet
+#
+#snippet distd "new distribution of a descrete random variable" b
+#\begin{definition}[$1]
+#	~\\\\
+#	\textit{Random variable definition}:
+#	\[
+#		X \sim \textrm{$2}($3)
+#	\]
+#	\textit{Parameters}:
+#	\begin{align*}
+#		&$4 :& \textrm{ $5 }$6
+#	\end{align*}
+#	\textit{PMF}:
+#	\[
+#		P(X=x)= $7
+#	\]
+#	\textit{Mean and Variance}:
+#	\begin{gather*}
+#		E(X)= $8\\\\
+#		V(X)= $9
+#	\end{gather*}
+#\end{definition}
+#$0
+#endsnippet
 
 snippet figi "New Latex Fig from image" b
 \begin{figure}[h]
@@ -83,6 +83,18 @@ snippet figi "New Latex Fig from image" b
 \end{figure}
 $0
 endsnippet
+
+snippet figt "New Latex Fig from tikz" b
+\begin{figure}[h]
+	\caption{$1}
+	\centering
+	\begin{tikzpicture}
+		$2
+	\end{tikzpicture}
+\end{figure}
+$0
+endsnippet
+
 
 context "not math()"
 snippet m "starts inline math mode"
@@ -101,33 +113,33 @@ snippet O "big-O"
 \$O( $1 )\$$0
 endsnippet
 
-context "not math()"
-snippet pr "make a procedure with inputs"
-\textsc{$1}\$( $2 )\$$0
-endsnippet
-
-context "not math()"
-snippet p "procedure name"
-\textsc{$1}$0
-endsnippet
+#context "not math()"
+#snippet pr "make a procedure with inputs"
+#\textsc{$1}\$( $2 )\$$0
+#endsnippet
+#
+#context "not math()"
+#snippet p "procedure name"
+#\textsc{$1}$0
+#endsnippet
 
 #snippet co "constant"
 #\const{$1}$0
 #endsnippet
 
-context "math()"
-snippet ni "constant nil" A
-\textsc{Nil}$0
-endsnippet
-
-snippet code "makes a new codebox" b
-\begin{algorithmic}[1]
-	\State \textsc{ $1}\$( $2 )\$:
-	\Indent
-	\State $0
-	\EndIndent
-\end{algorithmic}
-endsnippet
+#context "math()"
+#snippet ni "constant nil" A
+#\textsc{Nil}$0
+#endsnippet
+#
+#snippet code "makes a new codebox" b
+#\begin{algorithmic}[1]
+#	\State \textsc{ $1}\$( $2 )\$:
+#	\Indent
+#	\State $0
+#	\EndIndent
+#\end{algorithmic}
+#endsnippet
 
 context "not math()"
 snippet it "italics"
@@ -183,7 +195,7 @@ endsnippet
 
 context "math()"
 snippet rm "create the textrm command" A
-\textrm{ $1 } $0
+\textrm{ $1 }$0
 endsnippet
 
 context "math()"
@@ -346,7 +358,7 @@ snippet ne "not equal" A
 \neq $0
 endsnippet
 
-context "math()"
-snippet "[^0-9 ]\." "adding mathit to variables" riA
-`!p snip.rv = match.group(0)`\mathit{$1}$0
-endsnippet
+#context "math()"
+#snippet "[^0-9 ]\." "adding mathit to variables" riA
+#`!p snip.rv = match.group(0)`\mathit{$1}$0
+#endsnippet
