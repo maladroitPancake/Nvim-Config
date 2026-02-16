@@ -151,17 +151,17 @@ snippet bf "boldface"
 \textbf{$1}$0
 endsnippet
 
-#snippet ( "auto matching parens" iA
-#($1)$0
-#endsnippet
+snippet ( "auto matching parens" iA
+($1)$0
+endsnippet
 
-#snippet [ "auto expanding square brackets" iA
-#[$1]$0
-#endsnippet
+snippet [ "auto expanding square brackets" iA
+[$1]$0
+endsnippet
 
-#snippet "(\\?)\{" "auto expanding curly braces" riA
-#`!p snip.rv = match.group(1)`{$1`!p snip.rv = match.group(1)`}$0
-#endsnippet
+snippet "(\\?)\{" "auto expanding curly braces" riA
+`!p snip.rv = match.group(1)`{$1`!p snip.rv = match.group(1)`}$0
+endsnippet
 
 context "math()"
 snippet ff "The LaTeX \frac{}{} command" A
@@ -170,12 +170,17 @@ endsnippet
 
 context "math()"
 snippet din "A definite Integral" A
-\int_{ $1 }^{ $2 } $3 \; d$4 $0
+\int_{ $1 }^{ $2 } $3 \; d$0
 endsnippet
 
 context "math()"
 snippet in "An indefite Integral" A
-\int $1 \; d$2 $0
+\int $1 \; d$0
+endsnippet
+
+context "math()"
+snippet In "An indefinite integral with subscript" A
+\int_{ $1 } $2 \; d$0
 endsnippet
 
 context "math()"
@@ -189,13 +194,23 @@ snippet sm "sum" A
 endsnippet
 
 context "math()"
+snippet Sm "sum but only on bottom" A
+\sum_{ $1 \in $2 } $0
+endsnippet
+
+context "math()"
 snippet st "set definition" A
 \left\\{ $1 \,:\, $2 \right\\} $0
 endsnippet
 
 context "math()"
-snippet rm "create the textrm command" A
-\textrm{ $1 }$0
+snippet rm "create the mathrm command" A
+\mathrm{$1}$0
+endsnippet
+
+context "math()"
+snippet Rm "create the textrm command" A
+\textrm{$1}$0
 endsnippet
 
 context "math()"
@@ -219,6 +234,11 @@ snippet un "union" A
 endsnippet
 
 context "math()"
+snippet Un "big union" A
+\bigcup_{ $1 }^{ $2 } $0
+endsnippet
+
+context "math()"
 snippet im "implication" A
 \implies $0
 endsnippet
@@ -230,7 +250,7 @@ endsnippet
 
 context "math()"
 snippet td "tripple dots" A
-... $0
+\ldots $0
 endsnippet
 
 context "math()"
@@ -344,6 +364,11 @@ snippet la "lambda" A
 endsnippet
 
 context "math()"
+snippet ch "chi" A
+\chi $0
+endsnippet
+
+context "math()"
 snippet ge "greater than or equal to" A
 \geq $0
 endsnippet
@@ -362,3 +387,17 @@ endsnippet
 #snippet "[^0-9 ]\." "adding mathit to variables" riA
 #`!p snip.rv = match.group(0)`\mathit{$1}$0
 #endsnippet
+context "math()"
+snippet jk "Mathit" A
+\mathit{$1}$0
+endsnippet
+
+context "math()"
+snippet lk "overline" A
+\overline{$1}$0
+endsnippet
+
+context "math()"
+snippet kl "underline" A
+\underline{$1}$0
+endsnippet

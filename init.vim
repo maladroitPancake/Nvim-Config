@@ -27,12 +27,13 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_autoclose_after_keystrokes = 30
 
-let g:pear_tree_pairs = {
-			\ '(': {'closer': ')'},
-			\ '[': {'closer': ']'},
-			\ '{': {'closer': '}'},
-			\ '\\{': {'closer': '\\}'}
-			\}
+let g:pear_tree_ft_disabled = ['tex']
+"let g:pear_tree_pairs = {
+"			\ '(': {'closer': ')'},
+"			\ '[': {'closer': ']'},
+"			\ '{': {'closer': '}'},
+"			\ '\\{': {'closer': '\\}'}
+"			\}
 "This slows stuff down so I'm gonna try it disabled for a bit
 "let g:pear_tree_smart_openers = 1
 "let g:pear_tree_smart_closers = 1
