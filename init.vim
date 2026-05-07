@@ -8,6 +8,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
 "Plug 'itchyny/lightline.vim'
 Plug 'tmsvg/pear-tree'
+Plug 'harenome/vim-mipssyntax'
 
 call plug#end()
 
@@ -50,6 +51,9 @@ nnoremap <leader>us <cmd>call UltiSnips#RefreshSnippets()<CR>
 nnoremap <leader>w <cmd>write<CR>
 "Enter visual block
 nnoremap <leader>v <c-v>
+"Switch windows
+nnoremap <leader>s <c-W>w
+
 "Might want to enable for future? I maybe want this to be tab but it probably
 "messes with snippets.
 "imap <Tab> <Plug>(PearTreeJump)
