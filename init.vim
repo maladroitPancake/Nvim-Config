@@ -3,18 +3,14 @@ call plug#begin()
 
 Plug 'SirVer/ultisnips'
 Plug 'lervag/vimtex'
-"Plug 'mhartington/oceanic-next'
 Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
-"Plug 'itchyny/lightline.vim'
 Plug 'tmsvg/pear-tree'
-Plug 'harenome/vim-mipssyntax'
 
 call plug#end()
 
 " Theme
 "syntax enable
-"colorscheme OceanicNext
 colorscheme iceberg
 
 let mapleader = " "

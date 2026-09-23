@@ -3,6 +3,22 @@ def math():
   return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 endglobal
 
+snippet head "Generic Header" b
+\documentclass[$1pt]{$2}
+
+$4
+
+\begin{document}
+
+\title{$3}
+\author{Troy Woodley}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
 snippet env "New LaTeX environment" b
 \begin{$1}
 	$2
