@@ -132,21 +132,21 @@ endsnippet
 #snippet pr "make a procedure with inputs"
 #\textsc{$1}\$( $2 )\$$0
 #endsnippet
-#
-#context "not math()"
-#snippet p "procedure name"
-#\textsc{$1}$0
-#endsnippet
+
+context "not math()"
+snippet p "procedure name"
+\textsc{$1}$0
+endsnippet
 
 #snippet co "constant"
 #\const{$1}$0
 #endsnippet
 
-#context "math()"
-#snippet ni "constant nil" A
-#\textsc{Nil}$0
-#endsnippet
-#
+context "math()"
+snippet ni "constant nil" A
+\textsc{Nil}$0
+endsnippet
+
 #snippet code "makes a new codebox" b
 #\begin{algorithmic}[1]
 #	\State \textsc{ $1}\$( $2 )\$:
@@ -398,10 +398,11 @@ snippet ne "not equal" A
 \neq $0
 endsnippet
 
-#context "math()"
-#snippet "[^0-9 ]\." "adding mathit to variables" riA
-#`!p snip.rv = match.group(0)`\mathit{$1}$0
-#endsnippet
+context "math()"
+snippet "[^0-9 ]\." "adding mathit to variables" riA
+`!p snip.rv = match.group(0)`\mathit{$1}$0
+endsnippet
+
 context "math()"
 snippet jk "Mathit" A
 \mathit{$1}$0

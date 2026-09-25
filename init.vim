@@ -1,8 +1,8 @@
 "plugin loading
 call plug#begin()
 
-Plug 'SirVer/ultisnips'
-Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips', { 'for': 'tex'}
+Plug 'lervag/vimtex', { 'for': 'tex'}
 Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tmsvg/pear-tree'
